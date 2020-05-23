@@ -181,27 +181,29 @@ public class Exercicio1 {
         
         //Lendo a primeira linha do arquivo
         String linha1 = leitor.readLine();
-        //Lendo a segunda linha do arquivo
-        String linha2 = leitor.readLine();
+        String [] strLinCol = linha1.split(" ");
         
-        String linha3 = leitor.readLine();
+        //Salvando os dados da primeira linha em um vetor
+        int [] linCol = new int [2];
+        linCol [0] = Integer.parseInt(strLinCol[0]);
+        linCol [1] = Integer.parseInt(strLinCol[1]);
         
-        //Transforma o dado da Linha 1 em inteiro
-        int ql = Integer.parseInt(linha1);
+        //Atribuindo os dados da primeira linha a linha e a coluna da matriz
+        int ql = linCol[0];
+        int qc = linCol[1];
         
-        //Transforma o dado da Linha 2 em inteiro
-        int qc = Integer.parseInt(linha2);
+        String linha = leitor.readLine();
         
         //Cria um vetor para armazenar as linhas convertidas
-        double[] dados = new double [5];
+        double[] dados = new double [ql];
         
         //Cria a matriz
         double matriz[][] = new double [ql][qc];
         
         //Contador para as linhas
-        for (int i = 0; i < dados.length; i++) {
+        for (int i = 0; i < ql; i++) {
             //Armazena os dados da linha do txt em um vetor
-            String[] dados3 = linha3.split(" ");
+            String[] dados3 = linha.split(" ");
             //Contador para as colunas
              for (int j = 0; j < dados.length; j++) {
                 //Faz a conversão do vetor de String para o vetor do tipo double
@@ -210,7 +212,7 @@ public class Exercicio1 {
                 matriz[i][j] = dados[j];
              }
              //Lê a proxima linha do arquivo
-             linha3 = leitor.readLine();
+             linha = leitor.readLine();
         }
         
         //Fecha o arquivo
