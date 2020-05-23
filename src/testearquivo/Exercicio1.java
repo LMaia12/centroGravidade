@@ -11,12 +11,12 @@ import java.io.FileReader;
 
 /**
  *
- * @author Leonardo
+ * @author Leonardo Maia e Evelyn Carmo
  */
 public class Exercicio1 {
 
     public static void main(String[] args) throws Exception{
-       double matriz[][] = lerMatriz("matriz.txt");
+       double matriz[][] = lerMatriz("matriz.txt"); // recebe a função ler Matriz e recebe o nome do arquivo txt na pasta de origem.
         
         int ql = matriz.length; // quantidade de linha
         int qc = matriz[0].length; // quantidade de coluna
@@ -81,7 +81,6 @@ public class Exercicio1 {
                     pl2 = 0;//tira o resultado dos ultimos calculos
                     rodada++; // adciona a rodada
                     ignorada--;
-                    /*Obs Léo: esse i-0 é necessário? Pois quando executa esse comando, teoricamente ele sai do laço*/
                     i = -1;// e zera o contador das linhas
 
                 } else {
@@ -152,7 +151,7 @@ public class Exercicio1 {
                     /*Obs Léo: esse i-0 é necessário? Pois quando executa esse comando, teoricamente ele sai do laço*/
                     i = -1;// e zera o contador das linhas
 
-                } else { // OK, CORRETO
+                } else { 
                     //se a linha não for a coluna que será testada, faz a variavel que recebe a soma da primeira porção, receber a soma dela.
                     for (int j = 0; j < l; j++) {
                         pl1 += m[j][i];
@@ -168,8 +167,9 @@ public class Exercicio1 {
     public static void imprimeMatriz(double[][] m, int l, int c) {
         for (int i = 0; i < l; i++) {
             for (int j = 0; j < c; j++) {
-                System.out.println("v[" + i + "]:" + m[i]);
+                System.out.println(m[i][j]+ " ");
             }
+            System.out.println("");
         }
     }
     
