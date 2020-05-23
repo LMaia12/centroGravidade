@@ -195,7 +195,7 @@ public class Exercicio1 {
         String linha = leitor.readLine();
         
         //Cria um vetor para armazenar as linhas convertidas
-        double[] dados = new double [ql];
+        double[] dados = new double [qc];
         
         //Cria a matriz
         double matriz[][] = new double [ql][qc];
